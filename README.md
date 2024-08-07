@@ -14,40 +14,40 @@ Tables
 
 Suppliers
 
-*supplier_id* (INT, Primary Key)
-*supplier_name* (VARCHAR)
-*contact_person* (VARCHAR)
-*phone_number* (VARCHAR)
-*email* (VARCHAR)
+- *supplier_id* (INT, Primary Key)
+- *supplier_name* (VARCHAR)
+- *contact_person* (VARCHAR)
+- *phone_number* (VARCHAR)
+- *email* (VARCHAR)
 
 Products
 
-*product_id* (INT, Primary Key)
-*product_name* (VARCHAR)
-*description* (TEXT)
-*unit_price* (DECIMAL)
-*supplier_id* (INT, Foreign Key to Suppliers)
+- *product_id* (INT, Primary Key)
+- *product_name* (VARCHAR)
+- *description* (TEXT)
+- *unit_price* (DECIMAL)
+- *supplier_id* (INT, Foreign Key to Suppliers)
 
 Orders
 
-*order_id* (INT, Primary Key)
-*order_date* (DATE)
-*supplier_id* (INT, Foreign Key to Suppliers)
-*total_amount* (DECIMAL)
+- *order_id* (INT, Primary Key)
+- *order_date* (DATE)
+- *supplier_id* (INT, Foreign Key to Suppliers)
+- *total_amount* (DECIMAL)
 
 OrderDetails
 
-*order_detail_id* (INT, Primary Key)
-*order_id* (INT, Foreign Key to Orders)
-*product_id* (INT, Foreign Key to Products)
-*quantity* (INT)
-*unit_price* (DECIMAL)
-*total_price* (DECIMAL)
+- *order_detail_id* (INT, Primary Key)
+- *order_id* (INT, Foreign Key to Orders)
+- *product_id* (INT, Foreign Key to Products)
+- *quantity* (INT)
+- *unit_price* (DECIMAL)
+- *total_price* (DECIMAL)
 
 Shipments
 
-*shipment_id* (INT, Primary Key)
-*order_id* (INT, Foreign Key to Orders)
-*shipment_date* (DATE)
-*delivery_date* (DATE)
-*status* (VARCHAR)
+- *shipment_id* (INT, Primary Key)
+- *order_id* (INT, Foreign Key to Orders)
+- *shipment_date* (DATE)
+- *delivery_date* (DATE)
+- *status* (VARCHAR)
